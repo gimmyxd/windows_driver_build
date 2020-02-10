@@ -13,6 +13,6 @@ MicrosoftElamCertificateInfo  MSElamCertInfoID
 {
       1, // count of entries
       L"CertHash\0",
-      Algorithm,
+      "Algorithm",
       L"\0", //No EKU for cert hash 2
 }

@@ -68,21 +68,10 @@ DriverEntry(
     {
         return Status;
     }
-
-    //
-    // Register for the boot driver callback.
-    //
-
-    g_IoRegisterBootDriverCallbackHandle = IoRegisterBootDriverCallback(
-                                                ElamSampleBootDriverCallback,
-                                                NULL);
-
-    if (g_IoRegisterBootDriverCallbackHandle == NULL)
+    else
     {
-        return STATUS_UNSUCCESSFUL;
+        return NT_SUCCESS(Status);
     }
-
-    return STATUS_SUCCESS;
 }
 
 VOID
